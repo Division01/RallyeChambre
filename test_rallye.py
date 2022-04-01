@@ -9,7 +9,6 @@ mp_drawing = mp.solutions.drawing_utils
 def print_space():
     for i in range(50):
         print(' ')
-    return 'bite'
 
 
 def lancer_programme_urss():
@@ -24,7 +23,6 @@ def lancer_programme_urss():
         if mdp == "RIP petite Laïka" :
             print('Félicitations camarades, repose en paix brave Laïka, buvons en son honneur et quittons cette saleté de pièce. La clé était dans sa poche tout le long !')
             time.sleep(100)
-            return 'bite'
         else :
             essais += 1
             if essais == 3 :
@@ -32,14 +30,10 @@ def lancer_programme_urss():
                 time.sleep(10)
                 print("Bon je rigolais, la clé est dans la poche. ")
                 time.sleep(100)
-                return 'bite'
             essais_restants = 3 - essais
             print('Il vous reste ' + str(essais_restants) +' essais')
-    return 'bite'
 
-    
 flag = True
-
 
 # For webcam input:
 cap = cv2.VideoCapture(0)
@@ -74,6 +68,10 @@ with mp_face_detection.FaceDetection(
                     for a in range(118):
                         print(random.randint(0,1), end=" ")
                     print(' ')
+        else :
+            for a in range(118):
+                print(random.randint(0,1), end=" ")
+            print(' ')
         # Flip the image horizontally for a selfie-view display.
         #cv2.imshow('MediaPipe Face Detection', cv2.flip(image, 1))
         if cv2.waitKey(5) & 0xFF == 27:
