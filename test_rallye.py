@@ -70,7 +70,10 @@ with mp_face_detection.FaceDetection(
                     print(' ')
         else :
             for a in range(118):
-                print(random.randint(0,1), end=" ")
+                if random.randint(0,5) == 1 :
+                    print(' ', end=" ")
+                else :
+                    print(random.randint(0,1), end=" ")
             print(' ')
         # Flip the image horizontally for a selfie-view display.
         #cv2.imshow('MediaPipe Face Detection', cv2.flip(image, 1))
