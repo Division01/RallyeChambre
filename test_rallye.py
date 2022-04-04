@@ -33,7 +33,6 @@ def lancer_programme_urss():
             essais_restants = 3 - essais
             print('Il vous reste ' + str(essais_restants) +' essais')
 
-flag = True
 
 # For webcam input:
 cap = cv2.VideoCapture(0)
@@ -56,12 +55,12 @@ with mp_face_detection.FaceDetection(
         image.flags.writeable = True
         image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
         if results.detections:
-            count = 0
+            number_of_ppl_on_cam = 0
             
             for detection in results.detections:
-                count += 1
+                number_of_ppl_on_cam += 1
                 #mp_drawing.draw_detection(image, detection)
-                if count >= 4 and flag == True:
+                if number_of_ppl_on_cam >= 4 :
                     lancer_programme_urss()
                     flag = False
                 else :
