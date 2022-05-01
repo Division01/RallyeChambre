@@ -3,8 +3,10 @@
 Webcam needed
 
 Quick code to make a fun escape game activity. You need to have mediapipe and opencv dependencies for python.
-If you don't you can type in your commande prompt (if you have python in PATH) :
+If you don't you can type in your command prompt (if you have python in PATH) :
+
 pip install mediapipe
+
 pip install opencv-python
 
 Just run the code (py test-rallye.py) on a command prompt, it will connect to your webcam and show strings of bits. I used a dual screen, pressed alt + enter to fullscreen the command prompt and a youtube video of a waving flag on the second screen. The arrow icon was hidden by the full screen video.
